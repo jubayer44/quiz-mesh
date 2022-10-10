@@ -15,8 +15,8 @@ const Navbar = () => {
           <div className="flex items-center">
             <NavLink
               to="/"
-              aria-label="Company"
-              title="Company"
+              aria-label="QUIZ MESH"
+              title="QUIZ MESH"
               className="inline-flex items-center mr-8"
             >
               <img
@@ -40,15 +40,29 @@ const Navbar = () => {
             
           </div>
           <ul className="hidden items-center space-x-8 lg:flex">
+           
             <li>
               <NavLink
                 style={({ isActive }) =>
-                  isActive ? { color: "blue" } : undefined
+                  isActive ? { color: "yellow" } : undefined
+                }
+                to="/home"
+                aria-label="Topics"
+                title="Topics"
+                className="mr-5 font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+              >
+                home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                style={({ isActive }) =>
+                  isActive ? { color: "yellow" } : undefined
                 }
                 to="/topics"
-                aria-label="Sign in"
-                title="Sign in"
-                className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                aria-label="Topics"
+                title="Topics"
+                className="mr-5 font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >
                 Topics
               </NavLink>
@@ -56,12 +70,12 @@ const Navbar = () => {
             <li>
               <NavLink
                 style={({ isActive }) =>
-                  isActive ? { color: "blue" } : undefined
+                  isActive ? { color: "yellow" } : undefined
                 }
                 to="/statistics"
-                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                aria-label="Sign up"
-                title="Sign up"
+                className="text-white font-semibold"
+                aria-label="Statistics"
+                title="Statistics"
               >
                 Statistics
               </NavLink>
@@ -69,12 +83,12 @@ const Navbar = () => {
             <li>
               <NavLink
                 style={({ isActive }) =>
-                  isActive ? { color: "blue" } : undefined
+                  isActive ? { color: "yellow" } : undefined
                 }
                 to="/blog"
                 className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                aria-label="Sign up"
-                title="Sign up"
+                aria-label="Blog"
+                title="Blog"
               >
                 Blog
               </NavLink>
@@ -109,7 +123,7 @@ const Navbar = () => {
                     <div>
                       <NavLink
                         style={({ isActive }) =>
-                          isActive ? { color: "blue" } : undefined
+                          isActive ? { color: "yellow" } : undefined
                         }
                         to="/"
                         aria-label="Company"
@@ -159,8 +173,8 @@ const Navbar = () => {
                             isActive ? { color: "blue" } : undefined
                           }
                           to="/topics"
-                          aria-label="Product pricing"
-                          title="Product pricing"
+                          aria-label="Topics"
+                          title="Topics"
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                           Topics
@@ -172,8 +186,8 @@ const Navbar = () => {
                             isActive ? { color: "blue" } : undefined
                           }
                           to="/statistics"
-                          aria-label="About us"
-                          title="About us"
+                          aria-label="Statistics"
+                          title="Statistics"
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                           Statistics
@@ -185,26 +199,14 @@ const Navbar = () => {
                             isActive ? { color: "blue" } : undefined
                           }
                           to="/blog"
-                          aria-label="Sign in"
-                          title="Sign in"
+                          aria-label="Blog"
+                          title="Blog"
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                           Blog
                         </NavLink>
                       </li>
-                      <li>
-                        <NavLink
-                          style={({ isActive }) =>
-                            isActive ? { color: "blue" } : undefined
-                          }
-                          to="/orders"
-                          className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                          aria-label="Sign up"
-                          title="Sign up"
-                        >
-                          Orders
-                        </NavLink>
-                      </li>
+                      
                     </ul>
                   </nav>
                 </div>

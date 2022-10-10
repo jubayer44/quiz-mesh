@@ -5,13 +5,13 @@ const Footer = () => {
     return (
         <div>
            
-<footer className="bg-white" aria-labelledby="footer-heading">
+<footer className="bg-slate-800" aria-labelledby="footer-heading">
   <h2 id="footer-heading" className="sr-only">Footer</h2>
-  <div className="px-5 py-12 mx-auto max-w-7xl lg:py-16 md:px-12 lg:px-20 text-left">
+  <div className=" px-5 py-12 mx-auto max-w-7xl lg:py-16 md:px-12 lg:px-20 text-left ">
     <div className="xl:grid xl:grid-cols-3 xl:gap-8">
       <div className="space-y-8 xl:col-span-1 text-left">
         <Link to="/" className="text-lg font-bold tracking-tighter text-blue-600 transition duration-500 ease-in-out transform tracking-relaxed lg:pr-8"> QUIZ MESH </Link>
-        <p className="w-1/2 mt-2 text-sm text-gray-500">Wicked templates for wicked dev's</p>
+        
       </div>
       <div className="grid grid-cols-2 gap-8 mt-12 xl:mt-0 xl:col-span-2">
         <div className="md:grid md:grid-cols-2 md:gap-8">
@@ -79,7 +79,7 @@ const Footer = () => {
     </div>
   </div>
 
-  <div className="px-5 py-12 mx-auto bg-gray-50 max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-20">
+  <div className="px-5 py-12 mx-auto bg-slate-800 max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-20">
     <div className="flex justify-center mb-8 space-x-6 md:order-last md:mb-0">
       <Link to="/" className="text-gray-400 hover:text-gray-500">
         <span className="sr-only">Facebook</span>
@@ -117,10 +117,10 @@ const Footer = () => {
       </Link>
     </div>
 
-    <div className="mt-8 md:mt-0 md:order-1">
+    <div className="mt-8 md:mt-0 md:order-1 text-white">
       <span className="mt-2 text-sm font-light text-gray-500">
         Copyright © 2020 - 2021
-        <Link to="https://wickedlabs.dev" className="mx-2 text-wickedblue hover:text-gray-500" rel="noopener noreferrer">@wickedlabsHQ</Link>. Since 2020
+        <span className=" mx-2 text-wickedblue hover:text-gray-500" rel="noopener noreferrer">@QUIZ MESH</span>. Since 2020
       </span>
     </div>
   </div>

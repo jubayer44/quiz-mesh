@@ -1,8 +1,15 @@
 import React from 'react';
+import Icon from "react-hero-icon";
+import { useNavigate } from 'react-router-dom';
 
 const Cards = ({data}) => {
-    console.log(data);
-    const {id, name, logo, total} = data;
+    const { name, logo, total, id} = data;
+    const navigate = useNavigate()
+
+    const handleNavigate = () => {
+        navigate(`/quiz/${id}`)
+    }
+
     return (
         <div className="px-4 py-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-4 shadow-lg my-4 rounded-lg">
       <div className=" sm:max-w-sm sm:mx-auto lg:max-w-full">
@@ -17,7 +24,10 @@ const Cards = ({data}) => {
           <div className="py-5 text-center">
             
               <p className="text-2xl font-bold leading-5 ">{name}</p>
-           <button className='bg-purple-700 p-2 rounded text-white font-bold mt-3 w-full'>Start Here</button>
+              <p className='mt-2 font-bold'><small>Total Question: {total}</small></p>
+           <button onClick={handleNavigate} className='bg-purple-700 p-3 rounded text-white font-bold mt-3 w-full flex justify-center'>Start Here 
+           <Icon className='ml-2' icon='arrow-right' />
+           </button>
             
           </div>
         </div>

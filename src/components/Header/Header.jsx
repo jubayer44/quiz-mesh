@@ -57,10 +57,13 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 my-10">
+      <div className="my-10 p-2">
+      <h2 className="mb-5 font-sans text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl sm:leading-none text-center">Select Any Item That You Want For Answer Question</h2>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 ">
       {
         quizData.data.map(data => <Cards key={data.id} data={data}/>)
       }
+      </div>
       </div>
       </div>
     );
