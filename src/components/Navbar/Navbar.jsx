@@ -39,7 +39,7 @@ const Navbar = () => {
             </NavLink>
             
           </div>
-          <ul className="flex items-center hidden space-x-8 lg:flex">
+          <ul className="hidden items-center space-x-8 lg:flex">
             <li>
               <NavLink
                 style={({ isActive }) =>
