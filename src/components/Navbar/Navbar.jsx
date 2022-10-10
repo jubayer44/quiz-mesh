@@ -45,7 +45,7 @@ const Navbar = () => {
                 style={({ isActive }) =>
                   isActive ? { color: "blue" } : undefined
                 }
-                to="/review"
+                to="/topics"
                 aria-label="Sign in"
                 title="Sign in"
                 className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
@@ -58,7 +58,7 @@ const Navbar = () => {
                 style={({ isActive }) =>
                   isActive ? { color: "blue" } : undefined
                 }
-                to="/orders"
+                to="/statistics"
                 className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                 aria-label="Sign up"
                 title="Sign up"
@@ -71,7 +71,7 @@ const Navbar = () => {
                 style={({ isActive }) =>
                   isActive ? { color: "blue" } : undefined
                 }
-                to="/orders"
+                to="/blog"
                 className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                 aria-label="Sign up"
                 title="Sign up"
@@ -158,7 +158,7 @@ const Navbar = () => {
                           style={({ isActive }) =>
                             isActive ? { color: "blue" } : undefined
                           }
-                          to="/pricing"
+                          to="/topics"
                           aria-label="Product pricing"
                           title="Product pricing"
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -171,7 +171,7 @@ const Navbar = () => {
                           style={({ isActive }) =>
                             isActive ? { color: "blue" } : undefined
                           }
-                          to="/about"
+                          to="/statistics"
                           aria-label="About us"
                           title="About us"
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -184,7 +184,7 @@ const Navbar = () => {
                           style={({ isActive }) =>
                             isActive ? { color: "blue" } : undefined
                           }
-                          to="/review"
+                          to="/blog"
                           aria-label="Sign in"
                           title="Sign in"
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
