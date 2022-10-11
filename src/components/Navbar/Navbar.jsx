@@ -8,7 +8,7 @@ const Navbar = () => {
     <div className="bg-gray-900">
       <div
         className={`lg:mb-0 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ${
-          isMenuOpen ? "mb-[300px]" : null
+          isMenuOpen ? "mb-[140px]" : null
         }`}
       >
         <div className="relative flex items-center justify-between">
@@ -166,6 +166,19 @@ const Navbar = () => {
                   </div>
                   <nav>
                     <ul className="space-y-4">
+                    <li>
+              <NavLink
+                style={({ isActive }) =>
+                  isActive ? { color: "blue" } : undefined
+                }
+                to="/home"
+                aria-label="Topics"
+                title="Topics"
+                className="mr-5 font-medium tracking-wide text-gray-700  transition-colors duration-200 hover:text-teal-accent-400"
+              >
+                home
+              </NavLink>
+            </li>
                       
                       <li>
                         <NavLink
