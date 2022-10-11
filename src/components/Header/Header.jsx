@@ -6,7 +6,6 @@ import Cards from "../Cards/Cards";
 const Header = () => {
   // const quizData = useLoaderData();
   const [quizData] = useContext(TopicsContext)
-    console.log(quizData.data);
 
     return (
       <div>
