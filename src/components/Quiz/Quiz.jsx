@@ -12,7 +12,9 @@ const Quiz = () => {
   const showAns = (id) => {
     const singleQuiz = questions.find((question) => question.id === id);
     if (singleQuiz) {
-      toast(`Correct Answer is "${singleQuiz.correctAnswer}"`, { position: "top-center"});
+      toast(`Correct Answer is "${singleQuiz.correctAnswer}"`, {
+        position: "top-center",
+      });
       return;
     }
   };
@@ -38,14 +40,14 @@ const Quiz = () => {
         Simple {total} Questions of {name}
       </h1>
       {questions.map((quiz) => {
-        // console.log(quiz);
+        
         return (
           <div
             key={quiz.id}
             className="bg-slate-300 p-4 my-8 shadow-lg rounded-lg"
           >
             <div className="flex justify-between">
-              <h2 className="text-xl font-bold">
+              <h2 className="text-xl font-bold text-[midnightblue]">
                 <span className="mr-2">{(count = count + 1)}.</span>
                 {quiz.question}{" "}
               </h2>
@@ -57,13 +59,13 @@ const Quiz = () => {
             </div>
 
             <div>
-                {
-                    quiz.options.map((ques, idx) => <QuizAnswer
-                     key={idx}
-                    option={ques}
-                    handleAnswer={handleAnswer}
-                    />)
-                }
+              {quiz.options.map((ques, idx) => (
+                <QuizAnswer
+                  key={idx}
+                  option={ques}
+                  handleAnswer={handleAnswer}
+                />
+              ))}
               <ToastContainer />
             </div>
           </div>

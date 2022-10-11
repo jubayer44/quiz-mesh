@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from '../Images/logo.png';
+import logo from "../Images/logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,7 +8,7 @@ const Navbar = () => {
     <div className="bg-gray-900">
       <div
         className={`lg:mb-0 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ${
-          isMenuOpen ? "mb-[140px]" : null
+          isMenuOpen ? "mb-[200px]" : null
         }`}
       >
         <div className="relative flex items-center justify-between">
@@ -20,8 +20,8 @@ const Navbar = () => {
               className="inline-flex items-center mr-8"
             >
               <img
-              src={logo}
-              alt="/" 
+                src={logo}
+                alt="/"
                 className="w-8 text-teal-400"
                 viewBox="0 0 24 24"
                 strokeLinejoin="round"
@@ -30,17 +30,13 @@ const Navbar = () => {
                 strokeMiterlimit="10"
                 stroke="currentColor"
                 fill="none"
-              >
-                
-              </img>
+              ></img>
               <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
                 QUIZ MESH
               </span>
             </NavLink>
-            
           </div>
           <ul className="hidden items-center space-x-8 lg:flex">
-           
             <li>
               <NavLink
                 style={({ isActive }) =>
@@ -48,7 +44,7 @@ const Navbar = () => {
                 }
                 to="/home"
                 aria-label="Topics"
-                title="Topics"
+                title="Home"
                 className="mr-5 font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >
                 home
@@ -131,8 +127,8 @@ const Navbar = () => {
                         className="inline-flex items-center"
                       >
                         <img
-                        src={logo}
-                        alt="/"
+                          src={logo}
+                          alt="/"
                           className="w-8 text-deep-purple-accent-400"
                           viewBox="0 0 24 24"
                           strokeLinejoin="round"
@@ -141,8 +137,7 @@ const Navbar = () => {
                           strokeMiterlimit="10"
                           stroke="currentColor"
                           fill="none"
-                        >
-                        </img>
+                        ></img>
                         <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                           QUIZ MESH
                         </span>
@@ -166,20 +161,20 @@ const Navbar = () => {
                   </div>
                   <nav>
                     <ul className="space-y-4">
-                    <li>
-              <NavLink
-                style={({ isActive }) =>
-                  isActive ? { color: "blue" } : undefined
-                }
-                to="/home"
-                aria-label="Topics"
-                title="Topics"
-                className="mr-5 font-medium tracking-wide text-gray-700  transition-colors duration-200 hover:text-teal-accent-400"
-              >
-                home
-              </NavLink>
-            </li>
-                      
+                      <li>
+                        <NavLink
+                          style={({ isActive }) =>
+                            isActive ? { color: "blue" } : undefined
+                          }
+                          to="/home"
+                          aria-label="Topics"
+                          title="Home"
+                          className="mr-5 font-medium tracking-wide text-gray-700  transition-colors duration-200 hover:text-teal-accent-400"
+                        >
+                          home
+                        </NavLink>
+                      </li>
+
                       <li>
                         <NavLink
                           style={({ isActive }) =>
@@ -219,7 +214,6 @@ const Navbar = () => {
                           Blog
                         </NavLink>
                       </li>
-                      
                     </ul>
                   </nav>
                 </div>
@@ -233,4 +227,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
