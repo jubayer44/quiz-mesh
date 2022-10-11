@@ -1,15 +1,10 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { TopicsContext } from "../../Layout/Main";
-import Cards from "../Cards/Cards";
+import Topics from "../Topics/Topics";
 
 const Header = () => {
-  // const quizData = useLoaderData();
-  const [quizData] = useContext(TopicsContext)
-
-    return (
-      <div>
-        <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
+  return (
+    <div>
+      <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
         <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
           <svg
             className="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block"
@@ -25,19 +20,23 @@ const Header = () => {
             alt=""
           />
         </div>
-        <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
+        <div className="relative flex flex-col items-start w-full  px-4 mx-auto md:px-0 lg:px-8">
           <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5 text-left">
-            
             <h2
               className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
               style={{ lineHeight: "42px" }}
             >
-              Every student matters every 
-              
-              <span className="inline-block text-purple-600"> moment counts</span>
+              Every student matters every
+              <span className="inline-block text-purple-600">
+                {" "}
+                moment counts
+              </span>
             </h2>
             <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
-            Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.
+              Programming today is a race between software engineers striving to
+              build bigger and better idiot-proof programs, and the Universe
+              trying to produce bigger and better idiots. So far, the Universe
+              is winning.
             </p>
             <div className="flex items-center">
               <Link
@@ -58,16 +57,14 @@ const Header = () => {
         </div>
       </div>
       <div className="my-10 p-2">
-      <h2 className="mb-5 font-sans text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl sm:leading-none text-center">Select Any Topics For Answer Question</h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 ">
-      {
-        quizData.data.map(data => <Cards key={data.id} data={data}/>)
-      }
+        <h2 className="mb-5 font-sans text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl sm:leading-none text-center">
+          Select Any Topics For Answer Question
+        </h2>
+
+        <Topics />
       </div>
-      </div>
-      </div>
-    );
-  };
-  
-  export default Header;
- 
+    </div>
+  );
+};
+
+export default Header;
