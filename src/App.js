@@ -13,16 +13,15 @@ function App() {
     {
       path: '/',
       element: <Main/>,
+      loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
       errorElement: <ErrorPage/>,
       children: [
         {
           index: true,
-          loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <Header/>
         },
         {
           path: '/home',
-          loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <Header/>
         },
         {
@@ -56,3 +55,12 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+

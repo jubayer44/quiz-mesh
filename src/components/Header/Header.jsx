@@ -1,9 +1,12 @@
-import { useLoaderData } from "react-router-dom";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { TopicsContext } from "../../Layout/Main";
 import Cards from "../Cards/Cards";
 
 const Header = () => {
-  const quizData = useLoaderData();
-    // console.log(quizData.data);
+  // const quizData = useLoaderData();
+  const [quizData] = useContext(TopicsContext)
+    console.log(quizData.data);
 
     return (
       <div>
@@ -32,33 +35,31 @@ const Header = () => {
             >
               Every student matters every 
               
-              <span className="inline-block text-purple-600">moment counts</span>
+              <span className="inline-block text-purple-600"> moment counts</span>
             </h2>
             <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae. explicabo.
+            Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.
             </p>
             <div className="flex items-center">
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-700 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
               >
                 Get started
-              </a>
-              <a
-                href="/"
+              </Link>
+              <Link
+                to="/"
                 aria-label=""
                 className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700"
               >
                 Learn more
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </div>
       <div className="my-10 p-2">
-      <h2 className="mb-5 font-sans text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl sm:leading-none text-center">Select Any Item That You Want For Answer Question</h2>
+      <h2 className="mb-5 font-sans text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl sm:leading-none text-center">Select Any Topics For Answer Question</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 ">
       {
         quizData.data.map(data => <Cards key={data.id} data={data}/>)
@@ -70,4 +71,4 @@ const Header = () => {
   };
   
   export default Header;
-  
+ 
