@@ -40,7 +40,11 @@ const Quiz = () => {
         Simple {total} Questions of {name}
       </h1>
       {questions.map((quiz) => {
-        
+        const singleQuestion = quiz.question;
+        const freshQuestion = singleQuestion.split(">");
+        const quizs = freshQuestion[1].split("<");
+        const finalQuiz = quizs[0];
+
         return (
           <div
             key={quiz.id}
@@ -49,7 +53,7 @@ const Quiz = () => {
             <div className="flex justify-between">
               <h2 className="text-xl font-bold text-[midnightblue]">
                 <span className="mr-2">{(count = count + 1)}.</span>
-                {quiz.question}{" "}
+                {finalQuiz}{" "}
               </h2>
               <Icon
                 onClick={() => showAns(quiz.id)}
