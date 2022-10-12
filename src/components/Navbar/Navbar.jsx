@@ -8,7 +8,7 @@ const Navbar = () => {
     <div className="bg-gray-900">
       <div
         className={`lg:mb-0 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ${
-          isMenuOpen ? "mb-[200px]" : null
+          isMenuOpen ? "mb-[240px]" : null
         }`}
       >
         <div className="relative flex items-center justify-between">
@@ -45,7 +45,7 @@ const Navbar = () => {
                 to="/home"
                 aria-label="Topics"
                 title="Home"
-                className="mr-5 font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                className="mr-5 font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-400"
               >
                 home
               </NavLink>
@@ -58,7 +58,7 @@ const Navbar = () => {
                 to="/topics"
                 aria-label="Topics"
                 title="Topics"
-                className="mr-5 font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                className="mr-5 font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-400"
               >
                 Topics
               </NavLink>
@@ -69,11 +69,25 @@ const Navbar = () => {
                   isActive ? { color: "yellow" } : undefined
                 }
                 to="/statistics"
-                className="text-white font-semibold"
+                className="text-white font-semibold hover:text-teal-400"
                 aria-label="Statistics"
                 title="Statistics"
               >
                 Statistics
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                style={({ isActive }) =>
+                  isActive ? { color: "yellow" } : undefined
+                }
+                to="/blog"
+                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline hover:text-teal-400"
+                aria-label="Blog"
+                title="Blog"
+              >
+                Blog
               </NavLink>
             </li>
             <li>
@@ -81,12 +95,12 @@ const Navbar = () => {
                 style={({ isActive }) =>
                   isActive ? { color: "yellow" } : undefined
                 }
-                to="/blog"
-                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                aria-label="Blog"
-                title="Blog"
+                to="/team"
+                className="text-white font-semibold hover:text-teal-400"
+                aria-label="Team"
+                title="Team"
               >
-                Blog
+                Team
               </NavLink>
             </li>
           </ul>
@@ -169,7 +183,7 @@ const Navbar = () => {
                           to="/home"
                           aria-label="Topics"
                           title="Home"
-                          className="mr-5 font-medium tracking-wide text-gray-700  transition-colors duration-200 hover:text-teal-accent-400"
+                          className="mr-5 font-medium tracking-wide text-gray-700  transition-colors duration-200 hover:text-teal-400"
                         >
                           home
                         </NavLink>
@@ -183,7 +197,7 @@ const Navbar = () => {
                           to="/topics"
                           aria-label="Topics"
                           title="Topics"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-400"
                         >
                           Topics
                         </NavLink>
@@ -196,7 +210,7 @@ const Navbar = () => {
                           to="/statistics"
                           aria-label="Statistics"
                           title="Statistics"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-400"
                         >
                           Statistics
                         </NavLink>
@@ -209,9 +223,22 @@ const Navbar = () => {
                           to="/blog"
                           aria-label="Blog"
                           title="Blog"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-400"
                         >
                           Blog
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          style={({ isActive }) =>
+                            isActive ? { color: "blue" } : undefined
+                          }
+                          to="/team"
+                          aria-label="Team"
+                          title="Team"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-400"
+                        >
+                          Team
                         </NavLink>
                       </li>
                     </ul>

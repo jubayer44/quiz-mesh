@@ -2,7 +2,10 @@ import React from "react";
 
 const QuizAnswer = ({ handleAnswer, option }) => {
   return (
-    <div value={option} className="bg-cyan-300 p-4 text-[18px] text-gray-800 my-5 rounded-lg hover:bg-cyan-400">
+    <div
+      value={option}
+      className="bg-cyan-300 p-4 text-[18px] text-gray-800 my-5 rounded-lg hover:bg-cyan-400"
+    >
       <input
         style={{ height: "20px", width: "20px", verticalAlign: "middle" }}
         onClick={() => handleAnswer(option)}

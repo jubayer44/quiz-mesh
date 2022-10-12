@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
       <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0 font-">
-        <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
+        <div className="inset-y-0 top-0 right-0 z-0 w-full  px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
           <svg
             className="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block"
             viewBox="0 0 100 100"
@@ -15,7 +15,7 @@ const Home = () => {
             <path d="M50 0H100L50 100H0L50 0Z" />
           </svg>
           <img
-            className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
+            className="object-cover w-full rounded shadow-lg lg:rounded-none lg:shadow-none lg:h-full"
             src="https://img.etimg.com/thumb/width-640,height-480,imgsize-78471,resizemode-1,msid-49831206/industry/services/education/da-vinci-learning-launches-hd-educational-channel-in-india.jpg"
             alt=""
           />
@@ -40,8 +40,8 @@ const Home = () => {
             </p>
             <div className="flex items-center">
               <Link
-                to="/"
-                className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-700 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                to="/topics"
+                className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-700 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none hover:bg-purple-900"
               >
                 Get started
               </Link>

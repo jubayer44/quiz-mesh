@@ -28,7 +28,7 @@ const Topic = ({ data }) => {
             </p>
             <button
               onClick={handleNavigate}
-              className="bg-purple-700 p-3 rounded text-white font-bold mt-3 w-full flex justify-center"
+              className="bg-purple-700 p-3 rounded text-white font-bold mt-3 w-full flex justify-center hover:bg-purple-900"
             >
               Start Here
               <Icon className="ml-2" icon="arrow-right" />

@@ -5,6 +5,7 @@ import ErrorPage from "./components/ErrorPage/ErrorPage";
 import Home from "./components/Home/Home";
 import Quiz from "./components/Quiz/Quiz";
 import Statistics from "./components/Statistics/Statistics";
+import Team from "./components/Team/Team";
 import Topics from "./components/Topics/Topics";
 import Main from "./Layout/Main";
 
@@ -44,6 +45,10 @@ function App() {
             );
           },
           element: <Quiz />,
+        },
+        {
+          path: "/team",
+          element: <Team />,
         },
       ],
     },

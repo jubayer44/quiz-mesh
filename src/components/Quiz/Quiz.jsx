@@ -40,30 +40,28 @@ const Quiz = () => {
         Simple {total} Questions of {name}
       </h1>
       {questions.map((quiz) => {
-        const singleQuestion = quiz.question;
+        const { question, id, options } = quiz;
+        const singleQuestion = question;
         const freshQuestion = singleQuestion.split(">");
         const quizs = freshQuestion[1].split("<");
         const finalQuiz = quizs[0];
 
         return (
-          <div
-            key={quiz.id}
-            className="bg-slate-300 p-4 my-8 shadow-lg rounded-lg"
-          >
+          <div key={id} className="bg-slate-300 p-4 my-8 shadow-lg rounded-lg">
             <div className="flex justify-between">
               <h2 className="text-xl font-bold text-[midnightblue]">
                 <span className="mr-2">{(count = count + 1)}.</span>
                 {finalQuiz}{" "}
               </h2>
               <Icon
-                onClick={() => showAns(quiz.id)}
+                onClick={() => showAns(id)}
                 className="w-[60px] cursor-pointer"
                 icon="eye"
               />
             </div>
 
             <div>
-              {quiz.options.map((ques, idx) => (
+              {options.map((ques, idx) => (
                 <QuizAnswer
                   key={idx}
                   option={ques}
